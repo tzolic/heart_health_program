@@ -85,19 +85,19 @@ void BMI(void)
 
   if(BMI_num < 18.5)
   {
-    puts("Your BMI < 18.5: you are underweight");
+    puts("Your BMI < 18.5: you are underweight.");
   }
   else if(BMI_num >= 18.5 && BMI_num <= 24.9)
   {
-    puts("Your BMI is between 18.5 and 24.9: you have a normal weight");
+    puts("Your BMI is between 18.5 and 24.9: you have an ideal weight.");
   }
   else if(BMI_num >= 25 && BMI_num <= 29.9)
   {
-    puts("Your BMI is between 25 and 29.9: you are overweight");
+    puts("Your BMI is between 25 and 29.9: you are overweight.");
   }
   else if(BMI_num >= 30)
   {
-    puts("Your BMI >= 30: you are obsese");
+    puts("Your BMI >= 30: you are obsese.");
   }
   //reset to default color
   printf("\033[0m");
