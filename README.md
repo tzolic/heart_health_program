@@ -22,7 +22,7 @@ An ERICE score is the likelihood in percentage that you will experience heart-re
 
 ### How to enter them if you don’t have a blood pressure reading?
 
-I obviously don’t expect you to have a specific reading of systolic and diastolic blood pressure. You can use the ideal range for reference:
+I obviously don’t expect you to have a specific reading of them. You can use the ideal range for reference:
 
 - systolic: 90-120 mmHg
 - diastolic: 60-80 mmHg
