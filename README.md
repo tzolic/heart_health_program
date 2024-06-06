@@ -16,8 +16,8 @@ An ERICE score is the likelihood in percentage that you will experience heart-re
 
 ### What are systolic diastolic blood pressure? And cholesterol?
 
-- systolic: measure of the pressure in your arteries while your heart is beating
-- diastolic: measure of the pressure in your arteries while your heart is resting in between heartbeats
+- systolic: measure of the pressure in your arteries while your heart is beating.
+- diastolic: measure of the pressure in your arteries while your heart is resting in between heartbeats.
 - cholesterol: fatty substance found in your blood, necessary for building healthy cells. However, high levels of cholesterol can increase your risk of heart disease.
 
 ### How to enter them if you don’t have a blood pressure reading?
