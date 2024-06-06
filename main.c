@@ -105,8 +105,8 @@ void BMI(void)
 
 void blood_pressure(void)
 {
-  char* num1 = inputHandler("Enter systolic blood pressure (between 70 and 190mmHg, the ideal range is between 90 and 120mmHg):\n", "Input Error! Please enter a systolic blood pressure between 70 and 190mmHg:\n", systolic_condition);
-  char* num2 = inputHandler("Enter diastolic blood pressure (between 40 and 100mmHg, the ideal range is between 60 and 80mmHg):\n", "Input Error! Please enter a diastolic blood pressure between 40 and 100mmHg:\n", diastolic_condition);
+  char* num1 = inputHandler("Enter your systolic blood pressure (between 70 and 190mmHg, the ideal range is between 90 and 120mmHg):\n", "Input Error! Please enter a systolic blood pressure between 70 and 190mmHg:\n", systolic_condition);
+  char* num2 = inputHandler("Enter your diastolic blood pressure (between 40 and 100mmHg, the ideal range is between 60 and 80mmHg):\n", "Input Error! Please enter a diastolic blood pressure between 40 and 100mmHg:\n", diastolic_condition);
   
   double systolic_reading = atof(num1);
   double diastolic_reading = atof(num2);
@@ -206,7 +206,7 @@ void cardiac_risk(void)
   //prompts
 
   char* num1 = inputHandler("Enter your age (between 30 and 130years):\n", "Input error! Please enter an age between 30 and 130:\n", age_condition);
-  char* num2 = inputHandler("Enter systolic blood pressure (between 70 and 190mmHg, the ideal range is between 90 and 120mmHg):\n", "Input error! Please enter a systolic blood pressure between 70 and 190mmHg:\n", systolic_condition);
+  char* num2 = inputHandler("Enter your systolic blood pressure (between 70 and 190mmHg, the ideal range is between 90 and 120mmHg):\n", "Input error! Please enter a systolic blood pressure between 70 and 190mmHg:\n", systolic_condition);
   char* num3 = inputHandler("Enter 0 if you are a woman and 1 if you are a man:\n", "Input error! Please enter 1 or 0:\n", boolean_condition);
   char* num4 = inputHandler("Enter 0 if you are a non-smoker and 1 is you are a smoker:\n", "Input error! Please enter 0 or 1:\n", boolean_condition);
   char* num5 = inputHandler("Enter 0 if you are non-diabetic and 1 if you are diabetic:\n", "Input error! Please enter 0 or 1:\n", boolean_condition);
@@ -564,11 +564,3 @@ double average(int* arr, int size){
   }
   return (sum / size); 
 }
-
-
-
-
-
-
-
-
