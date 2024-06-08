@@ -1,8 +1,4 @@
-# Heart Health Program
-
-## Description 🔍
-
-A program that lets you calculate your BMI, take a blood pressure assessment, and calculate your ERICE score.
+# Heart Health Program ❤️
 
 ## Purpose 🎯
 
