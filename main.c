@@ -11,32 +11,37 @@ Description : A program that lets you calculate your BMI, take a blood pressure 
 #include <stdlib.h>
 #include <math.h>
 
+
+
+
 /*-----------function prototypes-----------*/
 
 char* inputHandler(char* prompt, char* error_prompt, int (*condition)(char* input));
-int menu_condition(char* input);
+int menuCondition(char* input);
 
 void BMI(void);
-int BMI_condition1(char* input);
-int BMI_condition2(char* input);
+int BMICondition1(char* input);
+int BMICondition2(char* input);
 
-void blood_pressure(void);
-int systolic_condition(char* input);
-int diastolic_condition(char* input);
+void bloodPressure(void);
+int systolicCondition(char* input);
+int diastolicCondition(char* input);
 
-void cardiac_risk(void);
-int age_condition(char* input);
-int boolean_condition(char* input);
-int diabetic_condition(char* input);
-int cholesterol_condition(char* input);
+void cardiacRisk(void);
+int ageCondition(char* input);
+int booleanCondition(char* input);
+int diabeticCondition(char* input);
+int cholesterolCondition(char* input);
 
 double average(int* arr, int size);
 
-/*----------main function----------*/
+
+
+
 
 int main(void)
 {
-  char* choice = inputHandler("1- BMI (body mass index calculation)\n2- Blood pressure assessment\n3- Cardiac risk score assessment\n4- Exit\nEnter your choice:\n", "Invalid choice! Please choose a number between 1 and 4:\n", menu_condition);
+  char* choice = inputHandler("1- BMI (body mass index calculation)\n2- Blood pressure assessment\n3- Cardiac risk score assessment\n4- Exit\nEnter your choice:\n", "Input Error! Please choose a number between 1 and 4:\n", menuCondition);
   if(strcmp("1",choice) == 0)
   {
     BMI();
@@ -46,14 +51,14 @@ int main(void)
   
   else if(strcmp("2",choice) == 0)
   {
-    blood_pressure();
+    bloodPressure();
     puts("");
     main();
   }
 
   else if(strcmp("3",choice) == 0)
   {
-    cardiac_risk();
+    cardiacRisk();
     puts("");
     main();
   }
@@ -70,10 +75,13 @@ int main(void)
 }
 
 
+
+
+
 void BMI(void)
 {
-  char* num1 = inputHandler("Enter your weight (between 20 and 500kg):\n", "Input Error! Please enter your weight between 20 and 500kg:\n", BMI_condition1);
-  char* num2 = inputHandler("Enter your height (between 0.5 and 2.5m):\n", "Input Error! Please enter your height between 0.5 and 2.5m:\n", BMI_condition2);
+  char* num1 = inputHandler("Enter your weight (between 20 and 500kg):\n", "Input Error! Please enter your weight between 20 and 500kg:\n", BMICondition1);
+  char* num2 = inputHandler("Enter your height (between 0.5 and 2.5m):\n", "Input Error! Please enter your height between 0.5 and 2.5m:\n", BMICondition2);
   
   double weight = atof(num1);
   double height = atof(num2);
@@ -103,10 +111,13 @@ void BMI(void)
   printf("\033[0m");
 }
 
-void blood_pressure(void)
+
+
+
+void bloodPressure(void)
 {
-  char* num1 = inputHandler("Enter your systolic blood pressure (between 70 and 190mmHg, the ideal range is between 90 and 120mmHg):\n", "Input Error! Please enter a systolic blood pressure between 70 and 190mmHg:\n", systolic_condition);
-  char* num2 = inputHandler("Enter your diastolic blood pressure (between 40 and 100mmHg, the ideal range is between 60 and 80mmHg):\n", "Input Error! Please enter a diastolic blood pressure between 40 and 100mmHg:\n", diastolic_condition);
+  char* num1 = inputHandler("Enter your systolic blood pressure (between 70 and 190mmHg, the ideal range is between 90 and 120mmHg):\n", "Input Error! Please enter a systolic blood pressure between 70 and 190mmHg:\n", systolicCondition);
+  char* num2 = inputHandler("Enter your diastolic blood pressure (between 40 and 100mmHg, the ideal range is between 60 and 80mmHg):\n", "Input Error! Please enter a diastolic blood pressure between 40 and 100mmHg:\n", diastolicCondition);
   
   double systolic_reading = atof(num1);
   double diastolic_reading = atof(num2);
@@ -134,11 +145,14 @@ void blood_pressure(void)
 }
 
 
-void cardiac_risk(void)
+
+
+void cardiacRisk(void)
 {
   puts("Lets calculate your ERICE risk score! (assuming that you are not undergoing antihypertensive treatment)\nAn ERICE score is the likelihood in percentage that you will experience heart-related issues within the next 10 years (it's a bit depressing but better be safe than surprised).\n");
 
-  //tables written in 2d arrays
+  /*----------tables written in 2d arrays----------*/
+
   int men_ERICE_data[24][16] = 
   {
   {56,57,58,55,66,67,69,65,46,47,48,45,56,57,58,55}, //1
@@ -204,13 +218,12 @@ void cardiac_risk(void)
   double cholesterol; //total cholesterol level (in mmol/L)
 
   //prompts
-
-  char* num1 = inputHandler("Enter your age (between 30 and 130years):\n", "Input error! Please enter an age between 30 and 130:\n", age_condition);
-  char* num2 = inputHandler("Enter your systolic blood pressure (between 70 and 190mmHg, the ideal range is between 90 and 120mmHg):\n", "Input error! Please enter a systolic blood pressure between 70 and 190mmHg:\n", systolic_condition);
-  char* num3 = inputHandler("Enter 0 if you are a woman and 1 if you are a man:\n", "Input error! Please enter 1 or 0:\n", boolean_condition);
-  char* num4 = inputHandler("Enter 0 if you are a non-smoker and 1 is you are a smoker:\n", "Input error! Please enter 0 or 1:\n", boolean_condition);
-  char* num5 = inputHandler("Enter 0 if you are non-diabetic and 1 if you are diabetic:\n", "Input error! Please enter 0 or 1:\n", boolean_condition);
-  char* num6 = inputHandler("Enter your cholesterol level (between 3 and 10mmol/L, the ideal range is <= 5.2mmol/L):\n", "Input error! Please enter a choresterol level between 4 and 8mmol/L:\n", cholesterol_condition);
+  char* num1 = inputHandler("Enter your age (between 30 and 130years):\n", "Input error! Please enter an age between 30 and 130years:\n", ageCondition);
+  char* num2 = inputHandler("Enter your systolic blood pressure (between 70 and 190mmHg, the ideal range is between 90 and 120mmHg):\n", "Input error! Please enter a systolic blood pressure between 70 and 190mmHg:\n", systolicCondition);
+  char* num3 = inputHandler("Enter 0 if you are a woman and 1 if you are a man:\n", "Input error! Please enter 1 or 0:\n", booleanCondition);
+  char* num4 = inputHandler("Enter 0 if you are a non-smoker and 1 is you are a smoker:\n", "Input error! Please enter 0 or 1:\n", booleanCondition);
+  char* num5 = inputHandler("Enter 0 if you are non-diabetic and 1 if you are diabetic:\n", "Input error! Please enter 0 or 1:\n", booleanCondition);
+  char* num6 = inputHandler("Enter your cholesterol level (between 3 and 10mmol/L, the ideal range is <= 5.2mmol/L):\n", "Input error! Please enter a choresterol level between 3 and 10mmol/L:\n", cholesterolCondition);
 
   age = atoi(num1);
   systolic = atof(num2);
@@ -219,15 +232,13 @@ void cardiac_risk(void)
   diabetic = atoi(num5);
   cholesterol = atof(num6);
   
-
   //row & column indexes initialization
   int row_index = 0;
   int column_index = 0;
 
   /*----------men data----------*/
 
-  /*----------men row movement----------*/
-  
+  //men row movement
   if(gender == 1)
   {
     //age movement
@@ -266,8 +277,7 @@ void cardiac_risk(void)
     }
   }
 
-  /*----------men column movement---------*/
-  
+  //men column movement
   if(gender == 1)
   {
     //smoker movement
@@ -297,8 +307,7 @@ void cardiac_risk(void)
 
   /*----------women data----------*/
 
-  /*----------women row movement----------*/
-
+  //women row movement
   if(gender == 0)
   {
     //age movement
@@ -333,8 +342,7 @@ void cardiac_risk(void)
     }
   }
 
-  /*----------women column movement----------*/
-  
+  //women column movement
   if(gender == 0)
   {
     //smoker movement
@@ -364,10 +372,8 @@ void cardiac_risk(void)
 
   if(gender == 1)
   {
-    //change text color to green in terminal
     printf("\033[1;32m");
     printf("Your ERICE cardiovascular score is: %d%%.\nIt means that in the next 10 years, the risk of a dangerous cardiac event is %d%%.\n", men_ERICE_data[row_index][column_index], men_ERICE_data[row_index][column_index]);
-    //reset to default color
     printf("\033[0m");  
   }
 
@@ -379,7 +385,8 @@ void cardiac_risk(void)
   }
 }
 
-/*----------input handler function----------*/
+
+
 
 char* inputHandler(char* prompt, char* error_prompt, int (*condition)(char* input))
 {
@@ -408,12 +415,10 @@ char* inputHandler(char* prompt, char* error_prompt, int (*condition)(char* inpu
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
 
-    //change text color to red in terminal
     printf("\033[1;31m");
     //length error prompt
     printf("Length error! Input exceeds maximum input limit. Please enter a shorter input:\n");
     fflush(stdout);
-    //reset to black color in terminal
     printf("\033[0m");
 
     fgets(input, buffer_size, stdin);
@@ -449,9 +454,12 @@ char* inputHandler(char* prompt, char* error_prompt, int (*condition)(char* inpu
   return input;
 }
 
+
+
+
 /*----------condition functions----------*/
 
-int menu_condition(char* input)
+int menuCondition(char* input)
 {
   if(strcmp("1",input) == 0 || strcmp("2",input) == 0 || strcmp("3",input) == 0 || strcmp("4",input) == 0)
   {
@@ -463,7 +471,7 @@ int menu_condition(char* input)
   }
 }
 
-int BMI_condition1(char* input)
+int BMICondition1(char* input)
 {
   int num = atoi(input);
   if(num >= 20 && num <= 500)
@@ -476,7 +484,7 @@ int BMI_condition1(char* input)
   } 
 }
 
-int BMI_condition2(char* input)
+int BMICondition2(char* input)
 {
   double num = atof(input);
   if(num >= 0.5 && num <= 2.5)
@@ -489,7 +497,7 @@ int BMI_condition2(char* input)
   }
 }
 
-int systolic_condition(char* input)
+int systolicCondition(char* input)
 {
   double num = atof(input);
   if(num >= 70 && num <= 190)
@@ -502,7 +510,7 @@ int systolic_condition(char* input)
   }
 }
 
-int diastolic_condition(char* input)
+int diastolicCondition(char* input)
 {
   double num = atof(input);
   if(num >= 40 && num <= 100)
@@ -515,7 +523,7 @@ int diastolic_condition(char* input)
   }
 }
 
-int age_condition(char* input)
+int ageCondition(char* input)
 {
   int num = atoi(input);
   if(num >= 30 && num <= 130)
@@ -529,7 +537,7 @@ int age_condition(char* input)
 }
 
 
-int boolean_condition(char* input)
+int booleanCondition(char* input)
 {
   int num = atoi(input);
   if((num == 1) || (num == 0 && strcmp("0",input) == 0))
@@ -542,7 +550,7 @@ int boolean_condition(char* input)
   }
 }
 
-int cholesterol_condition(char* input)
+int cholesterolCondition(char* input)
 {
   double num = atof(input);
   if(num >= 3 && num <= 10)
@@ -555,7 +563,9 @@ int cholesterol_condition(char* input)
   }
 }
 
-/*----------average function----------*/
+
+
+
 
 double average(int* arr, int size){
   double sum = 0;
