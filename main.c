@@ -1,9 +1,9 @@
 /*
-===========================================================================================================================
-Name        : Input Handler
-Author      : tzolic
-Description : A program that lets you calculate your BMI, take a blood pressure assessment, and calculate your ERICE score.
-===========================================================================================================================
+==========================================================================================================================
+Name       : Input Handler
+Author     : tzolic
+Description: A program that lets you calculate your BMI, take a blood pressure assessment, and calculate your ERICE score.
+==========================================================================================================================
 */
 
 #include <stdio.h>
