@@ -40,7 +40,7 @@ double average(int* arr, int size);
 
 
 int main(void){
-  char* choice = inputHandler("1- BMI (body mass index calculation)\n2- Blood pressure assessment\n3- Cardiac risk score assessment\n4- Exit\nEnter your choice:\n", "Input Error! Please choose a number between 1 and 4:\n", menuCondition);
+  char* choice = inputHandler("1- BMI (body mass index calculation)\n2- Blood pressure assessment\n3- Cardiac risk score assessment\n4- Exit\nEnter your choice:\n", "Input error! Please choose a number between 1 and 4:\n", menuCondition);
   if(strcmp("1",choice) == 0){
     BMI();
     puts("");
@@ -73,8 +73,8 @@ int main(void){
 
 
 void BMI(void){
-  char* num1 = inputHandler("Enter your weight (between 20 and 500kg):\n", "Input Error! Please enter your weight between 20 and 500kg:\n", BMICondition1);
-  char* num2 = inputHandler("Enter your height (between 0.5 and 2.5m):\n", "Input Error! Please enter your height between 0.5 and 2.5m:\n", BMICondition2);
+  char* num1 = inputHandler("Enter your weight (between 20 and 500kg):\n", "Input error! Please enter your weight between 20 and 500kg:\n", BMICondition1);
+  char* num2 = inputHandler("Enter your height (between 0.5 and 2.5m):\n", "Input error! Please enter your height between 0.5 and 2.5m:\n", BMICondition2);
   
   double weight = atof(num1);
   double height = atof(num2);
@@ -103,8 +103,8 @@ void BMI(void){
 
 
 void bloodPressure(void){
-  char* num1 = inputHandler("Enter your systolic blood pressure (between 70 and 190mmHg, the ideal range is between 90 and 120mmHg):\n", "Input Error! Please enter a systolic blood pressure between 70 and 190mmHg:\n", systolicCondition);
-  char* num2 = inputHandler("Enter your diastolic blood pressure (between 40 and 100mmHg, the ideal range is between 60 and 80mmHg):\n", "Input Error! Please enter a diastolic blood pressure between 40 and 100mmHg:\n", diastolicCondition);
+  char* num1 = inputHandler("Enter your systolic blood pressure (between 70 and 190mmHg, the ideal range is between 90 and 120mmHg):\n", "Input error! Please enter a systolic blood pressure between 70 and 190mmHg:\n", systolicCondition);
+  char* num2 = inputHandler("Enter your diastolic blood pressure (between 40 and 100mmHg, the ideal range is between 60 and 80mmHg):\n", "Input error! Please enter a diastolic blood pressure between 40 and 100mmHg:\n", diastolicCondition);
   
   double systolic_reading = atof(num1);
   double diastolic_reading = atof(num2);
