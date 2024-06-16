@@ -65,7 +65,6 @@ int main(void)
 
   else if(strcmp("4",choice) == 0)
   {
-    //change text color to green in terminal
     printf("\033[1;32m");
     printf("Thanks for using our hearth health program!");
     printf("\033[0m"); 
@@ -107,7 +106,6 @@ void BMI(void)
   {
     puts("Your BMI >= 30: you are obsese.");
   }
-  //reset to default color
   printf("\033[0m");
 }
 
