@@ -24,9 +24,9 @@ An ERICE score is the likelihood in percentage that you will experience heart-re
 
 I obviously don’t expect you to have a specific reading of them. You can use the ideal range for reference:
 
-- systolic: 90-120 mmHg
-- diastolic: 60-80 mmHg
-- cholesterol: ≤ 5.2
+- systolic: 90-120mmHg
+- diastolic: 60-80mmHg
+- cholesterol: ≤ 5.2mmol/L
 
 ## Demo 👁️
 
