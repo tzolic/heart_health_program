@@ -46,19 +46,16 @@ int main(void){
     puts("");
     main();
   }
-  
   else if(strcmp("2",choice) == 0){
     bloodPressure();
     puts("");
     main();
   }
-
   else if(strcmp("3",choice) == 0){
     cardiacRisk();
     puts("");
     main();
   }
-
   else if(strcmp("4",choice) == 0){
     printf("\033[1;32m");
     printf("Thanks for using our hearth health program!");
@@ -330,7 +327,6 @@ void cardiacRisk(void){
     printf("Your ERICE cardiovascular score is: %d%%.\nIt means that in the next 10 years, the risk of a dangerous cardiac event is %d%%.\n", men_ERICE_data[row_index][column_index], men_ERICE_data[row_index][column_index]);
     printf("\033[0m");  
   }
-
   else if(gender == 0){
     printf("\033[1;32m");
     printf("Your ERICE cardiovascular score is: %d%%\nIt means that in the next 10 years, the risk of a dangerous cardiac event is %d%%.\n", women_ERICE_data[row_index][column_index], women_ERICE_data[row_index][column_index]);
