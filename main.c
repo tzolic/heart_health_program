@@ -1,6 +1,6 @@
 /*
 ==========================================================================================================================
-Name       : Input Handler
+Name       : Hearth Health Program
 Author     : tzolic
 Description: A program that lets you calculate your BMI, take a blood pressure assessment, and calculate your ERICE score.
 ==========================================================================================================================
