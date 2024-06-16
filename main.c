@@ -39,32 +39,27 @@ double average(int* arr, int size);
 
 
 
-int main(void)
-{
+int main(void){
   char* choice = inputHandler("1- BMI (body mass index calculation)\n2- Blood pressure assessment\n3- Cardiac risk score assessment\n4- Exit\nEnter your choice:\n", "Input Error! Please choose a number between 1 and 4:\n", menuCondition);
-  if(strcmp("1",choice) == 0)
-  {
+  if(strcmp("1",choice) == 0){
     BMI();
     puts("");
     main();
   }
   
-  else if(strcmp("2",choice) == 0)
-  {
+  else if(strcmp("2",choice) == 0){
     bloodPressure();
     puts("");
     main();
   }
 
-  else if(strcmp("3",choice) == 0)
-  {
+  else if(strcmp("3",choice) == 0){
     cardiacRisk();
     puts("");
     main();
   }
 
-  else if(strcmp("4",choice) == 0)
-  {
+  else if(strcmp("4",choice) == 0){
     printf("\033[1;32m");
     printf("Thanks for using our hearth health program!");
     printf("\033[0m"); 
@@ -77,8 +72,7 @@ int main(void)
 
 
 
-void BMI(void)
-{
+void BMI(void){
   char* num1 = inputHandler("Enter your weight (between 20 and 500kg):\n", "Input Error! Please enter your weight between 20 and 500kg:\n", BMICondition1);
   char* num2 = inputHandler("Enter your height (between 0.5 and 2.5m):\n", "Input Error! Please enter your height between 0.5 and 2.5m:\n", BMICondition2);
   
@@ -90,20 +84,16 @@ void BMI(void)
   printf("\033[1;32m");
   printf("Your BMI is: %.1lf\n", BMI_num);
 
-  if(BMI_num < 18.5)
-  {
+  if(BMI_num < 18.5){
     puts("Your BMI < 18.5: you are underweight.");
   }
-  else if(BMI_num >= 18.5 && BMI_num <= 24.9)
-  {
+  else if(BMI_num >= 18.5 && BMI_num <= 24.9){
     puts("Your BMI is between 18.5 and 24.9: you have an ideal weight.");
   }
-  else if(BMI_num >= 25 && BMI_num <= 29.9)
-  {
+  else if(BMI_num >= 25 && BMI_num <= 29.9){
     puts("Your BMI is between 25 and 29.9: you are overweight.");
   }
-  else if(BMI_num >= 30)
-  {
+  else if(BMI_num >= 30){
     puts("Your BMI >= 30: you are obsese.");
   }
   printf("\033[0m");
@@ -112,8 +102,7 @@ void BMI(void)
 
 
 
-void bloodPressure(void)
-{
+void bloodPressure(void){
   char* num1 = inputHandler("Enter your systolic blood pressure (between 70 and 190mmHg, the ideal range is between 90 and 120mmHg):\n", "Input Error! Please enter a systolic blood pressure between 70 and 190mmHg:\n", systolicCondition);
   char* num2 = inputHandler("Enter your diastolic blood pressure (between 40 and 100mmHg, the ideal range is between 60 and 80mmHg):\n", "Input Error! Please enter a diastolic blood pressure between 40 and 100mmHg:\n", diastolicCondition);
   
@@ -122,20 +111,16 @@ void bloodPressure(void)
   
   printf("\033[1;32m");
 
-  if((systolic_reading >= 70 && systolic_reading <= 90)&&(diastolic_reading >= 40 && diastolic_reading <= 60))
-  {
+  if((systolic_reading >= 70 && systolic_reading <= 90)&&(diastolic_reading >= 40 && diastolic_reading <= 60)){
     puts("Your blood pressure is low: your heart isn't pumping as forcefully as it should.");
   }
-  else if(((systolic_reading >= 70 && systolic_reading <= 120) && (diastolic_reading >= 60 && diastolic_reading <= 80))||((systolic_reading >= 90 && systolic_reading <= 120) && (diastolic_reading >= 40 && diastolic_reading <= 80)))
-  {
+  else if(((systolic_reading >= 70 && systolic_reading <= 120) && (diastolic_reading >= 60 && diastolic_reading <= 80))||((systolic_reading >= 90 && systolic_reading <= 120) && (diastolic_reading >= 40 && diastolic_reading <= 80))){
     puts("Your blood pressure is ideal: you have a healthy balance of blood flow in your arteries.");
   }
-  else if(((systolic_reading >= 70 && systolic_reading <= 140)&&(diastolic_reading >= 80 && diastolic_reading <= 90))||((systolic_reading >= 120 && systolic_reading <= 140)&&(diastolic_reading >= 40 && diastolic_reading <= 90)))
-  {
+  else if(((systolic_reading >= 70 && systolic_reading <= 140)&&(diastolic_reading >= 80 && diastolic_reading <= 90))||((systolic_reading >= 120 && systolic_reading <= 140)&&(diastolic_reading >= 40 && diastolic_reading <= 90))){
     puts("Your blood pressure is pre-high: you are at risk of developing high blood pressure if not managed properly.");
   }
-  else if(((systolic_reading >= 70 && systolic_reading <= 190)&&(diastolic_reading >= 90 && diastolic_reading <= 100))||((systolic_reading >= 140 && systolic_reading <= 190)&&(diastolic_reading >= 40 && diastolic_reading <= 100)))
-  {
+  else if(((systolic_reading >= 70 && systolic_reading <= 190)&&(diastolic_reading >= 90 && diastolic_reading <= 100))||((systolic_reading >= 140 && systolic_reading <= 190)&&(diastolic_reading >= 40 && diastolic_reading <= 100))){
     puts("Your blood pressure is high: you are at risk of heart disease, stroke, and other cardiovascular problems.");
   }
 
@@ -145,8 +130,7 @@ void bloodPressure(void)
 
 
 
-void cardiacRisk(void)
-{
+void cardiacRisk(void){
   puts("Lets calculate your ERICE risk score! (assuming that you are not undergoing antihypertensive treatment)\nAn ERICE score is the likelihood in percentage that you will experience heart-related issues within the next 10 years (it's a bit depressing but better be safe than surprised).\n");
 
   /*----------tables written in 2d arrays----------*/
@@ -240,65 +224,51 @@ void cardiacRisk(void)
   if(gender == 1)
   {
     //age movement
-    if(age >= 70 && age <= 79)
-    {
+    if(age >= 70 && age <= 79){
       row_index += 4;
     }
-    else if(age >= 60 && age <= 69)
-    {
+    else if(age >= 60 && age <= 69){
       row_index += 8;
     }
-    else if(age >= 50 && age <= 59)
-    {
+    else if(age >= 50 && age <= 59){
       row_index += 12;
     }
-    else if(age >= 40 && age <= 49)
-    {
+    else if(age >= 40 && age <= 49){
       row_index += 16;
     }
-    else if(age >= 30 && age <= 39)
-    {
+    else if(age >= 30 && age <= 39){
       row_index += 20;
     }
     //systolic movement
-    if(systolic >= 160 && systolic <= 179)
-    {
+    if(systolic >= 160 && systolic <= 179){
       row_index += 1;
     }
-    else if(systolic >= 140 && systolic <= 159)
-    {
+    else if(systolic >= 140 && systolic <= 159){
       row_index += 2;
     }
-    else if(systolic <= 139)
-    {
+    else if(systolic <= 139){
       row_index += 3;
     }
   }
 
   //men column movement
-  if(gender == 1)
-  {
+  if(gender == 1){
     //smoker movement
-    if(smoker == 1)
-    {
+    if(smoker == 1){
       column_index += 4;
     }
     //diabetic  movement
-    if(diabetic == 0)
-    {
+    if(diabetic == 0){
       column_index += 8;
     }
     //cholesterol movement
-    if(cholesterol >= 5.2 && cholesterol <= 6.4)
-    {
+    if(cholesterol >= 5.2 && cholesterol <= 6.4){
       column_index += 1;
     }
-    else if(cholesterol >= 6.5 && cholesterol <= 7.7)
-    {
+    else if(cholesterol >= 6.5 && cholesterol <= 7.7){
       column_index += 2;
     }
-    else if(cholesterol >= 7.8)
-    {
+    else if(cholesterol >= 7.8){
       column_index += 3;
     }
   }
@@ -309,74 +279,59 @@ void cardiacRisk(void)
   if(gender == 0)
   {
     //age movement
-    if(age >= 70 && age <= 79)
-    {
+    if(age >= 70 && age <= 79){
       row_index += 4;
     }
-    else if(age >= 60 && age <= 69)
-    {
+    else if(age >= 60 && age <= 69){
       row_index += 8;
     }
-    else if(age >= 50 && age <= 59)
-    {
+    else if(age >= 50 && age <= 59){
       row_index += 12;
     }
-    else if(age >= 30 && age <= 49)
-    {
+    else if(age >= 30 && age <= 49){
       row_index += 16;
     }
     //systolic movement
-    if(systolic >= 160 && systolic <= 179)
-    {
+    if(systolic >= 160 && systolic <= 179){
       row_index += 1;
     }
-    else if(systolic >= 140 && systolic <= 159)
-    {
+    else if(systolic >= 140 && systolic <= 159){
       row_index += 2;
     }
-    else if(systolic <= 139)
-    {
+    else if(systolic <= 139){
       row_index += 3;
     }
   }
 
   //women column movement
-  if(gender == 0)
-  {
+  if(gender == 0){
     //smoker movement
-    if(smoker == 1)
-    {
+    if(smoker == 1){
       column_index += 4;
     }
     //diabetic  movement
-    if(diabetic == 0)
-    {
+    if(diabetic == 0){
       column_index += 8;
     }
     //cholesterol movement
-    if(cholesterol >= 5.2 && cholesterol <= 6.4)
-    {
+    if(cholesterol >= 5.2 && cholesterol <= 6.4){
       column_index += 1;
     }
-    else if(cholesterol >= 6.5 && cholesterol <= 7.7)
-    {
+    else if(cholesterol >= 6.5 && cholesterol <= 7.7){
       column_index += 2;
     }
-    else if(cholesterol >= 7.8)
-    {
+    else if(cholesterol >= 7.8){
       column_index += 3;
     }
   }
 
-  if(gender == 1)
-  {
+  if(gender == 1){
     printf("\033[1;32m");
     printf("Your ERICE cardiovascular score is: %d%%.\nIt means that in the next 10 years, the risk of a dangerous cardiac event is %d%%.\n", men_ERICE_data[row_index][column_index], men_ERICE_data[row_index][column_index]);
     printf("\033[0m");  
   }
 
-  else if(gender == 0)
-  {
+  else if(gender == 0){
     printf("\033[1;32m");
     printf("Your ERICE cardiovascular score is: %d%%\nIt means that in the next 10 years, the risk of a dangerous cardiac event is %d%%.\n", women_ERICE_data[row_index][column_index], women_ERICE_data[row_index][column_index]);
     printf("\033[0m"); 
@@ -386,15 +341,13 @@ void cardiacRisk(void)
 
 
 
-char* inputHandler(char* prompt, char* error_prompt, int (*condition)(char* input))
-{
+char* inputHandler(char* prompt, char* error_prompt, int (*condition)(char* input)){
   //choose initial buffer size
   size_t buffer_size = 300;
 
   //allocate dynamically memory input buffer
   char* input = (char*)malloc(buffer_size * sizeof(char));
-  if (input == NULL)
-  {
+  if (input == NULL){
       fprintf(stderr, "Memory allocation failed!");
       exit(1);
   }
@@ -424,8 +377,7 @@ char* inputHandler(char* prompt, char* error_prompt, int (*condition)(char* inpu
   }
 
   //handle condition error
-  while(condition(input) == 0)
-  {
+  while(condition(input) == 0){
     printf("\033[1;31m");
     //error prompt
     printf("%s", error_prompt);
@@ -459,106 +411,74 @@ char* inputHandler(char* prompt, char* error_prompt, int (*condition)(char* inpu
 
 int menuCondition(char* input)
 {
-  if(strcmp("1",input) == 0 || strcmp("2",input) == 0 || strcmp("3",input) == 0 || strcmp("4",input) == 0)
-  {
+  if(strcmp("1",input) == 0 || strcmp("2",input) == 0 || strcmp("3",input) == 0 || strcmp("4",input) == 0){
     return 1;
   }
-  else
-  {
-    return 0;
-  }
+  return 0;
 }
 
 int BMICondition1(char* input)
 {
   int num = atoi(input);
-  if(num >= 20 && num <= 500)
-  {
+  if(num >= 20 && num <= 500){
     return 1;
   }
-  else
-  {
-    return 0;
-  } 
+  return 0;
 }
 
 int BMICondition2(char* input)
 {
   double num = atof(input);
-  if(num >= 0.5 && num <= 2.5)
-  {
+  if(num >= 0.5 && num <= 2.5){
     return 1;
   }
-  else
-  {
-    return 0;
-  }
+  return 0;
 }
 
 int systolicCondition(char* input)
 {
   double num = atof(input);
-  if(num >= 70 && num <= 190)
-  {
+  if(num >= 70 && num <= 190){
     return 1;
   }
-  else
-  {
-    return 0;
-  }
+  return 0;
 }
 
 int diastolicCondition(char* input)
 {
   double num = atof(input);
-  if(num >= 40 && num <= 100)
-  {
+  if(num >= 40 && num <= 100){
     return 1;
   }
-  else
-  {
-    return 0;
-  }
+  return 0;
 }
 
 int ageCondition(char* input)
 {
   int num = atoi(input);
-  if(num >= 30 && num <= 130)
-  {
+  if(num >= 30 && num <= 130){
     return 1;
   }
-  else
-  {
-    return 0;
-  }
+  return 0;
 }
 
 
 int booleanCondition(char* input)
 {
   int num = atoi(input);
-  if((num == 1) || (num == 0 && strcmp("0",input) == 0))
-  {
+  if((num == 1) || (num == 0 && strcmp("0",input) == 0)){
     return 1;
   }
-  else
-  {
-    return 0;
-  }
+  return 0;
 }
 
 int cholesterolCondition(char* input)
 {
   double num = atof(input);
-  if(num >= 3 && num <= 10)
-  {
+  if(num >= 3 && num <= 10){
     return 1;
   }
-  else
-  {
-    return 0;
-  }
+  return 0;
 }
 
 
