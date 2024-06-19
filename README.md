@@ -1,4 +1,4 @@
-# Heart Health Program ❤️
+# Heart Health Program
 
 ## Description 🔍
 
