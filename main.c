@@ -15,7 +15,6 @@ Description: A program that lets you calculate your BMI, take a blood pressure a
 
 
 /*-----------function prototypes-----------*/
-
 char* inputHandler(char* prompt, char* error_prompt, int (*condition)(char* input));
 int menuCondition(char* input);
 
@@ -131,7 +130,6 @@ void cardiacRisk(void){
   puts("Lets calculate your ERICE risk score! (assuming that you are not undergoing antihypertensive treatment)\nAn ERICE score is the likelihood in percentage that you will experience heart-related issues within the next 10 years (it's a bit depressing but better be safe than surprised).\n");
 
   /*----------tables written in 2d arrays----------*/
-
   int men_ERICE_data[24][16] = 
   {
   {56,57,58,55,66,67,69,65,46,47,48,45,56,57,58,55}, //1
@@ -185,7 +183,6 @@ void cardiacRisk(void){
   };
 
   /*----------values initialization----------*/
-
   //row values
   int age;
   double systolic; //systolic blood pressure (in mmHg)
@@ -216,7 +213,6 @@ void cardiacRisk(void){
   int column_index = 0;
 
   /*----------men data----------*/
-
   //men row movement
   if(gender == 1)
   {
@@ -271,7 +267,6 @@ void cardiacRisk(void){
   }
 
   /*----------women data----------*/
-
   //women row movement
   if(gender == 0)
   {
@@ -404,7 +399,6 @@ char* inputHandler(char* prompt, char* error_prompt, int (*condition)(char* inpu
 
 
 /*----------condition functions----------*/
-
 int menuCondition(char* input)
 {
   if(strcmp("1",input) == 0 || strcmp("2",input) == 0 || strcmp("3",input) == 0 || strcmp("4",input) == 0){
