@@ -56,7 +56,9 @@ int main(void){
     main();
   }
   else if(strcmp("4",choice) == 0){
-    printf("\033[1;32mThanks for using our hearth health program!\033[0m");
+    printf("\033[1;32m");
+    printf("Thanks for using our hearth health program!");
+    printf("\033[0m");
   }
   
   return 0;
