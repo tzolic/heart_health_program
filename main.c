@@ -69,8 +69,8 @@ int main(void){
 
 
 void BMI(void){
-  char* num1 = inputHandler("Enter your weight (between 20 and 500kg):\n", "Input error! Please enter your weight between 20 and 500kg:\n", BMICondition1);
-  char* num2 = inputHandler("Enter your height (between 0.5 and 2.5m):\n", "Input error! Please enter your height between 0.5 and 2.5m:\n", BMICondition2);
+  char* num1 = inputHandler("Enter your weight (20-500kg):\n", "Input error! Enter your weight (20-500kg):\n", BMICondition1);
+  char* num2 = inputHandler("Enter your height (0.5-2.5m):\n", "Input error! Enter your height (0.5-2.5m):\n", BMICondition2);
   
   double weight = atof(num1);
   double height = atof(num2);
@@ -99,8 +99,8 @@ void BMI(void){
 
 
 void bloodPressure(void){
-  char* num1 = inputHandler("Enter your systolic blood pressure (between 70 and 190mmHg, the ideal range is between 90 and 120mmHg):\n", "Input error! Please enter a systolic blood pressure between 70 and 190mmHg:\n", systolicCondition);
-  char* num2 = inputHandler("Enter your diastolic blood pressure (between 40 and 100mmHg, the ideal range is between 60 and 80mmHg):\n", "Input error! Please enter a diastolic blood pressure between 40 and 100mmHg:\n", diastolicCondition);
+  char* num1 = inputHandler("Enter your systolic blood pressure (70-190mmHg, the ideal range is 90-120mmHg):\n", "Input error! Enter your systolic blood pressure (70-190mmHg, the ideal range is 90-120mmHg):\n", systolicCondition);
+  char* num2 = inputHandler("Enter your diastolic blood pressure (40-100mmHg, the ideal range is between 60-80mmHg):\n", "Input error! Enter your diastolic blood pressure (40-100mmHg, the ideal range is between 60-80mmHg):\n", diastolicCondition);
   
   double systolic_reading = atof(num1);
   double diastolic_reading = atof(num2);
@@ -194,12 +194,12 @@ void cardiacRisk(void){
   double cholesterol; //total cholesterol level (in mmol/L)
 
   //prompts
-  char* num1 = inputHandler("Enter your age (between 30 and 130years):\n", "Input error! Please enter an age between 30 and 130years:\n", ageCondition);
-  char* num2 = inputHandler("Enter your systolic blood pressure (between 70 and 190mmHg, the ideal range is between 90 and 120mmHg):\n", "Input error! Please enter a systolic blood pressure between 70 and 190mmHg:\n", systolicCondition);
+  char* num1 = inputHandler("Enter your age (30-130years):\n", "Input error! Enter your age (30-130years):\n", ageCondition);
+  char* num2 = inputHandler("Enter your systolic blood pressure (70-190mmHg, the ideal range is 90-120mmHg):\n", "Input error! Enter your systolic blood pressure (70-190mmHg, the ideal range is 90-120mmHg):\n", systolicCondition);
   char* num3 = inputHandler("Enter 0 if you are a woman and 1 if you are a man:\n", "Input error! Please enter 1 or 0:\n", booleanCondition);
   char* num4 = inputHandler("Enter 0 if you are a non-smoker and 1 is you are a smoker:\n", "Input error! Please enter 0 or 1:\n", booleanCondition);
   char* num5 = inputHandler("Enter 0 if you are non-diabetic and 1 if you are diabetic:\n", "Input error! Please enter 0 or 1:\n", booleanCondition);
-  char* num6 = inputHandler("Enter your cholesterol level (between 3 and 10mmol/L, the ideal range is <= 5.2mmol/L):\n", "Input error! Please enter a choresterol level between 3 and 10mmol/L:\n", cholesterolCondition);
+  char* num6 = inputHandler("Enter your cholesterol level (3-10mmol/L, the ideal range is <= 5.2mmol/L):\n", "Input error! Enter your cholesterol level (3-10mmol/L, the ideal range is <= 5.2mmol/L):\n", cholesterolCondition);
 
   age = atoi(num1);
   systolic = atof(num2);
