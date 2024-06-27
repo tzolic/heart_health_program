@@ -196,9 +196,9 @@ void cardiacRisk(void){
   //prompts
   char* num1 = inputHandler("Enter your age (30-130years):\n", "Input error! Enter your age (30-130years):\n", ageCondition);
   char* num2 = inputHandler("Enter your systolic blood pressure (70-190mmHg, the ideal range is 90-120mmHg):\n", "Input error! Enter your systolic blood pressure (70-190mmHg, the ideal range is 90-120mmHg):\n", systolicCondition);
-  char* num3 = inputHandler("Enter 0 if you are a woman and 1 if you are a man:\n", "Input error! Please enter 1 or 0:\n", booleanCondition);
-  char* num4 = inputHandler("Enter 0 if you are a non-smoker and 1 is you are a smoker:\n", "Input error! Please enter 0 or 1:\n", booleanCondition);
-  char* num5 = inputHandler("Enter 0 if you are non-diabetic and 1 if you are diabetic:\n", "Input error! Please enter 0 or 1:\n", booleanCondition);
+  char* num3 = inputHandler("Enter 0 if you are a woman and 1 if you are a man:\n", "Input error! Enter 0 if you are a woman and 1 if you are a man:\n", booleanCondition);
+  char* num4 = inputHandler("Enter 0 if you are a non-smoker and 1 is you are a smoker:\n", "Input error! Enter 0 if you are a non-smoker and 1 is you are a smoker:\n", booleanCondition);
+  char* num5 = inputHandler("Enter 0 if you are non-diabetic and 1 if you are diabetic:\n", "Input error! Enter 0 if you are non-diabetic and 1 if you are diabetic:\n", booleanCondition);
   char* num6 = inputHandler("Enter your cholesterol level (3-10mmol/L, the ideal range is <= 5.2mmol/L):\n", "Input error! Enter your cholesterol level (3-10mmol/L, the ideal range is <= 5.2mmol/L):\n", cholesterolCondition);
 
   age = atoi(num1);
