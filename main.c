@@ -39,7 +39,7 @@ double average(int* arr, int size);
 
 
 int main(void){
-  char* choice = inputHandler("1-BMI (body mass index calculation)\n2-Blood pressure assessment\n3-ERICE score assessment\n4-Exit\nEnter your choice:\n", "Input error! Please choose a number between 1 and 4:\n", menuCondition);
+  char* choice = inputHandler("1-BMI (body mass index calculation)\n2-Blood pressure assessment\n3-ERICE score assessment\n4-Exit\nEnter your choice (1-4):\n", "Input error! 1-BMI (body mass index calculation)\n2-Blood pressure assessment\n3-ERICE score assessment\n4-Exit\nEnter your choice (1-4):\n", menuCondition);
   if(strcmp("1",choice) == 0){
     BMI();
     puts("");
