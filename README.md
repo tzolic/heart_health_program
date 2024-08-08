@@ -4,11 +4,11 @@
 
 I used these 3 graphics as my reference:
 
-![Blood Pressure](content\blood_pressure_chart.gif)
+![Blood Pressure](content/blood_pressure_chart.gif)
 
-![Men ERICE](content\men_ERICE.jpeg)
+![Men ERICE](content/men_ERICE.jpeg)
 
-![Women ERICE](content\women_ERICE.jpeg)
+![Women ERICE](content/women_ERICE.jpeg)
 
 ## What were 3 things I learned? 🧠
 
