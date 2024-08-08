@@ -30,8 +30,8 @@ Unfortunately, I couldn't find a suitable formula, so I imported the graphics as
 
 I found that for every factor, it went up a proportional number of rows/columns.
 
-- age: every 10 years = +4 rows
-- systolic blood pressure: every 10mmHg = +1 row
-- smoker = +4 columns
-- diabetic = +8 columns
-- cholesterol: every 1.2mmol/L = +1 column
+- Age: every 10 years = +4 rows
+- Systolic blood pressure: every 10mmHg = +1 row
+- Smoker = +4 columns
+- Diabetic = +8 columns
+- Cholesterol: every 1.2mmol/L = +1 column
