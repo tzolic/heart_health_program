@@ -127,7 +127,7 @@ void bloodPressure(void){
 
 
 void cardiacRisk(void){
-  puts("Lets calculate your ERICE risk score! (assuming that you are not undergoing antihypertensive treatment)\nAn ERICE score is the likelihood in percentage that you will experience heart-related issues within the next 10 years (it's a bit depressing but better be safe than surprised).\n");
+  puts("Lets calculate your ERICE risk score (assuming that you are not undergoing antihypertensive treatment)!\nAn ERICE score is the likelihood in percentage that you will experience heart-related issues within the next 10 years (it's a bit depressing but better be safe than surprised).\n");
 
   /*----------tables written in 2d arrays----------*/
   int men_ERICE_data[24][16] = 
